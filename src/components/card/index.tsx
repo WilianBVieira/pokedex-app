@@ -43,6 +43,8 @@ const Card = ({ data }: ICardProps) => {
       .then((res) => res.json())
       .then((data) => setPokemonInfo(data));
   }, [data]);
+  console.log("oi");
+  console.log("oi");
   return (
     <ContainerCardPai>
       <CardComponent
