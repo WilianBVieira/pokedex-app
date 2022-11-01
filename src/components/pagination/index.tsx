@@ -10,18 +10,26 @@ interface PaginationProps {
 const Pagination = ({ pages, handleClick }: PaginationProps) => {
   return (
     <Container>
-      <IconContainer
-        onPress={(e: any) => {
-          if (pages > 1) handleClick(-1);
-        }}
-      >
-        <Ionicons name="leftsquareo" size={30} color="black" />
+      <IconContainer>
+        <Ionicons
+          name="leftsquareo"
+          size={30}
+          color="black"
+          onPress={(e: any) => {
+            if (pages > 1) handleClick(-1);
+          }}
+        />
       </IconContainer>
       <PageContainer>
-        <Text style={{ fontSize: 26 }}>{pages}</Text>
+        <Text style={{ fontSize: 30, textAlign: "center" }}>{pages}</Text>
       </PageContainer>
-      <IconContainer onPress={(e: any) => handleClick(1)}>
-        <Ionicons name="rightsquareo" size={30} color="black" />
+      <IconContainer>
+        <Ionicons
+          name="rightsquareo"
+          size={30}
+          color="black"
+          onPress={(e: any) => handleClick(1)}
+        />
       </IconContainer>
     </Container>
   );

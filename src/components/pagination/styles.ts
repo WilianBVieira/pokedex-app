@@ -3,13 +3,18 @@ import styled from "styled-components/native";
 export const Container = styled.View`
   flex-direction: row;
   justify-content: space-around;
-  padding: 15px;
+  align-items: center;
+  padding: 10px;
   width: 100%;
 `;
 
-export const IconContainer = styled.TouchableOpacity`
+export const IconContainer = styled.View`
   width: 25%;
-  background-color: red;
+  justify-content: center;
+  align-items: center;
 `;
 
-export const PageContainer = styled.View``;
+export const PageContainer = styled.View`
+  width: 50%;
+  text-align: center;
+`;

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { SafeAreaView, FlatList } from "react-native";
 import Card from "../card";
 
@@ -17,6 +18,7 @@ const List = ({ data }: IListProps) => {
   //       </ScrollView>
   //     </SafeAreaView>
   //   );
+  useEffect(() => {}, [data]);
   return (
     <FlatList
       style={{
@@ -33,7 +35,7 @@ const List = ({ data }: IListProps) => {
       numColumns={3}
       data={data}
       renderItem={({ item, index }) => <Card data={item} key={index} />}
-      keyExtractor={(item: any) => item.id}
+      keyExtractor={(item: any, index: number) => index.toString()}
     />
   );
 };
