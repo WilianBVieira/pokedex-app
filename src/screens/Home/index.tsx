@@ -5,6 +5,7 @@ import SearchBar from "../../components/searchBar";
 import Card from "../../components/card";
 import List, { IList } from "../../components/list";
 import Pagination from "../../components/pagination";
+import { convertAbsoluteToRem } from "native-base/lib/typescript/theme/tools";
 const Icon = require("../../assets/Pokeball.png");
 const Icon2 = require("../../assets/Vector.png");
 const Icon3 = require("../../assets/Lupa.png");
@@ -17,9 +18,15 @@ interface IReq {
 }
 const Home = () => {
   const [data, setData] = useState<IReq>();
+  const [page, setPage] = useState(1);
+  function handlePage(click: number) {
+    setPage(page + click);
+  }
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon/?limit=50")
+    fetch(
+      `https://pokeapi.co/api/v2/pokemon/?offset=${(page - 1) * 50}&limit=50`
+    )
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
@@ -27,8 +34,11 @@ const Home = () => {
     <ContainerPai>
       <Header />
       <SearchBar />
+      <Pagination
+        pages={page}
+        handleClick={(click: number) => handlePage(click)}
+      />
       <List data={data && data.results} />
-      <Pagination />
     </ContainerPai>
   );
 };

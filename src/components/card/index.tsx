@@ -42,7 +42,8 @@ const Card = ({ data }: ICardProps) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${data && data.name}`)
       .then((res) => res.json())
       .then((data) => setPokemonInfo(data));
-  }, []);
+  }, [data, pokemonInfo]);
+  useEffect(() => {}, [pokemonInfo]);
   return (
     <ContainerCardPai>
       <CardComponent

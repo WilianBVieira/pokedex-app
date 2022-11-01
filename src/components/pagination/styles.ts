@@ -6,6 +6,9 @@ export const Container = styled.View`
   width: 100%;
 `;
 
-export const IconContainer = styled.View``;
+export const IconContainer = styled.TouchableOpacity`
+  width: 25%;
+  background-color: red;
+`;
 
 export const PageContainer = styled.View``;
