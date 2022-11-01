@@ -29,7 +29,7 @@ const Home = () => {
     )
       .then((res) => res.json())
       .then((data) => setData(data));
-  }, []);
+  }, [page]);
   return (
     <ContainerPai>
       <Header />
