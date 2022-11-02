@@ -23,13 +23,10 @@ const List = ({ data }: IListProps) => {
     <FlatList
       style={{
         flexDirection: "column",
-        paddingTop: 5,
       }}
       columnWrapperStyle={{
         flex: 1,
         justifyContent: "center",
-
-        padding: 5,
       }}
       showsVerticalScrollIndicator={false}
       numColumns={3}

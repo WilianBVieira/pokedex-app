@@ -12,13 +12,14 @@ const SearchBar = () => {
         //   base: "90%",
         //   md: "25%",
         // }}
-        InputLeftElement={<Ionicons name="search1" size={15} color="black" />}
-        placeholder="Name"
+        InputLeftElement={<Ionicons name="search1" size={15} color="#979797" />}
+        placeholder="Procurar"
         style={{
-          textAlign: "center",
+          // textAlign: "center",
           borderRadius: 20,
-          width: "95%",
+          width: "100%",
           alignSelf: "center",
+          paddingLeft: "40.5%",
         }}
       />
     </Container>

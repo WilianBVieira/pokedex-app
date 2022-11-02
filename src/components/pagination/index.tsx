@@ -12,22 +12,24 @@ const Pagination = ({ pages, handleClick }: PaginationProps) => {
     <Container>
       <IconContainer>
         <Ionicons
-          name="leftsquareo"
+          name="left"
           size={30}
-          color="black"
+          color="#6E6E6E"
           onPress={(e: any) => {
             if (pages > 1) handleClick(-1);
           }}
         />
       </IconContainer>
       <PageContainer>
-        <Text style={{ fontSize: 30, textAlign: "center" }}>{pages}</Text>
+        <Text style={{ fontSize: 25, textAlign: "center", color: "#6E6E6E" }}>
+          {pages}
+        </Text>
       </PageContainer>
       <IconContainer>
         <Ionicons
-          name="rightsquareo"
+          name="right"
           size={30}
-          color="black"
+          color="#6E6E6E"
           onPress={(e: any) => handleClick(1)}
         />
       </IconContainer>

@@ -1,9 +1,9 @@
 import styled from "styled-components/native";
 
 export const ContainerCardPai = styled.View`
-  height: 180px;
+  height: 160px;
   width: 33%;
-  padding: 2px;
+  padding: 3.5px;
   margin-top: 5%;
   flex-direction: row;
 `;
@@ -27,8 +27,9 @@ export const CardTextContainer = styled.View`
   border-top-left-radius: 8px;
 `;
 
-export const CardText = styled.Text`
+export const CardText = styled.Text<CardProps>`
   margin-right: 5%;
+  color: ${(prop) => (prop.color ? prop.color : "white")};
 `;
 
 export const ContainerImg = styled.View`
@@ -56,7 +57,7 @@ export const ContainerImageCard = styled.View<CardProps>`
 `;
 
 export const CardTextEnd = styled.Text`
-  font-size: 22px;
-  font-weight: 400;
-  font-family: Georgia;
+  font-size: 20px;
+  font-family: Arial;
+  color: white;
 `;

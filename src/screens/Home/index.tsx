@@ -25,7 +25,7 @@ const Home = () => {
 
   useEffect(() => {
     fetch(
-      `https://pokeapi.co/api/v2/pokemon/?offset=${(page - 1) * 50}&limit=50`
+      `https://pokeapi.co/api/v2/pokemon/?offset=${(page - 1) * 21}&limit=21`
     )
       .then((res) => res.json())
       .then((data) => setData(data));

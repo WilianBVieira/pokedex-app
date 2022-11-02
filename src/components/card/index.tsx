@@ -51,7 +51,11 @@ const Card = ({ data }: ICardProps) => {
         color={useTypes(pokemonInfo && pokemonInfo.types[0].type.name)}
       >
         <CardTextContainer>
-          <CardText>{pokemonInfo && pokemonInfo.id}</CardText>
+          <CardText
+            color={useTypes(pokemonInfo && pokemonInfo.types[0].type.name)}
+          >
+            #{pokemonInfo && pokemonInfo.id}
+          </CardText>
         </CardTextContainer>
         <ContainerImg>
           <ImageCard
