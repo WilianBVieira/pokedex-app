@@ -10,7 +10,7 @@ function MyStack() {
     <NativeBaseProvider>
       <Navigator>
         <Screen name="Home" component={Home} />
-        <Screen name="Details" component={Details} />
+        <Screen name="details" component={Details} />
       </Navigator>
     </NativeBaseProvider>
   );

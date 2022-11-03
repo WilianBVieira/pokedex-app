@@ -1,4 +1,6 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
+import { DetailsParam } from "../../routes/@types/navigation";
 import useTypes from "../hook/typesColor";
 import { IList } from "../list";
 import {
@@ -15,7 +17,7 @@ const ImgCard = require("../../assets/Bulbasaur.png");
 interface ICardProps {
   data: IList | undefined;
 }
-interface IPokemon {
+export interface IPokemon {
   abilities: [];
   base_experience: number;
   forms: [];
@@ -38,16 +40,21 @@ interface IPokemon {
 const Card = ({ data }: ICardProps) => {
   // desestruturação
   const [pokemonInfo, setPokemonInfo] = useState<IPokemon>();
+  const navigation = useNavigation();
+  function handleDetails({ data }: DetailsParam) {
+    navigation.navigate("details", { data });
+  }
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${data && data.name}`)
       .then((res) => res.json())
       .then((data) => setPokemonInfo(data));
   }, [data]);
+  const pokemonData: DetailsParam = { data: pokemonInfo };
   return (
     <ContainerCardPai>
       <CardComponent
         activeOpacity={0.7}
-        onPress={alert}
+        onPress={() => handleDetails(pokemonData)}
         color={useTypes(pokemonInfo && pokemonInfo.types[0].type.name)}
       >
         <CardTextContainer>
