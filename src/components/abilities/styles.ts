@@ -7,9 +7,3 @@ export const ContainerPai = styled.View`
   justify-content: space-around;
   align-items: center;
 `;
-
-export const ContainerBaseStats = styled.View`
-  background-color: yellow;
-  height: 40%;
-  width: 80%;
-`;

@@ -40,6 +40,7 @@ export interface IPokemon {
 const Card = ({ data }: ICardProps) => {
   // desestruturação
   const [pokemonInfo, setPokemonInfo] = useState<IPokemon>();
+
   const navigation = useNavigation();
   function handleDetails({ data }: DetailsParam) {
     navigation.navigate("details", { data });

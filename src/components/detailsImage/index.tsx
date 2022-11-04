@@ -1,8 +1,13 @@
 import React from "react";
-import { ContainerPai } from "./styles";
+import { IPokemonProps } from "../detailsHeader";
+import { ContainerImage, ContainerPai } from "./styles";
 
-const DetailsImage = () => {
-  return <ContainerPai></ContainerPai>;
+const DetailsImage = ({ data }: IPokemonProps) => {
+  return (
+    <ContainerPai>
+      <ContainerImage source={{ uri: data && data.sprites.front_default }} />
+    </ContainerPai>
+  );
 };
 
 export default DetailsImage;

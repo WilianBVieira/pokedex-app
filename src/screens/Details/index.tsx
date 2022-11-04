@@ -13,8 +13,8 @@ const Details = () => {
 
   return (
     <ContainerPai>
-      <DetailsHeader />
-      <DetailsImage />
+      <DetailsHeader data={data} />
+      <DetailsImage data={data} />
       <Abilities />
     </ContainerPai>
   );
