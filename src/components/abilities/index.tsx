@@ -1,23 +1,21 @@
 import React from "react";
-import {
-  ContainerAbout,
-  ContainerBaseStats,
-  ContainerPai,
-  ContainerText,
-  ContainerTitle,
-  ContainerTitle2,
-  ContainerType,
-} from "./styles";
+import DetailsAbout from "../detailsAbout";
+import DetailsStats from "../detailsStats";
+import DetailsText from "../detailsText";
+import DetailsTitle from "../detailsTitle";
+import DetailsTitle2 from "../detailsTitle2";
+import DetailsType from "../detailsType";
+import { ContainerPai } from "./styles";
 
 const Abilities = () => {
   return (
     <ContainerPai>
-      <ContainerType />
-      <ContainerTitle />
-      <ContainerAbout />
-      <ContainerText />
-      <ContainerTitle2 />
-      <ContainerBaseStats />
+      <DetailsType />
+      <DetailsTitle />
+      <DetailsAbout />
+      <DetailsText />
+      <DetailsTitle2 />
+      <DetailsStats />
     </ContainerPai>
   );
 };
