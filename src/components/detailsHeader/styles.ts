@@ -5,22 +5,23 @@ export const ContainerPai = styled.View`
   background-color: green;
   height: 10%;
   width: 100%;
+  flex-direction: row;
 `;
 
-// export const ContainerHeaderPai = styled.View`
-//   background-color: green;
-//   height: 20%;
-//   width: 100%;
-// `;
+export const ContainerIcon = styled.View`
+  height: 100%;
+  width: 20%;
+  background-color: red;
+`;
 
-// export const ContainerImagePai = styled.View`
-//   background-color: blue;
-//   height: 30%;
-//   width: 100%;
-// `;
+export const ContainerName = styled.Text`
+  height: 100%;
+  width: 60%;
+  background-color: grey;
+`;
 
-// export const ContainerHabilidadesPai = styled.View`
-//   background-color: purple;
-//   height: 50%;
-//   width: 95%;
-// `;
+export const ContainerId = styled.Text`
+  height: 100%;
+  width: 20%;
+  background-color: beige;
+`;

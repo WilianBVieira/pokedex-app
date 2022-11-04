@@ -1,8 +1,20 @@
 import React from "react";
-import { ContainerPai } from "./styles";
+import {
+  ContainerIcon,
+  ContainerId,
+  ContainerName,
+  ContainerPai,
+} from "./styles";
 
 const DetailsHeader = () => {
-  return <ContainerPai></ContainerPai>;
+  return (
+    <ContainerPai>
+      <ContainerIcon />
+      <ContainerName />
+
+      <ContainerId />
+    </ContainerPai>
+  );
 };
 
 export default DetailsHeader;
