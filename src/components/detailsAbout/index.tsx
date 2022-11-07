@@ -1,8 +1,25 @@
 import React from "react";
-import { ContainerAbout } from "./styles";
+import {
+  ContainerAbout,
+  ContainerBarra,
+  ContainerHeigth,
+  ContainerMoves,
+  ContainerWeight,
+  ContainerWeightProps,
+} from "./styles";
 
 const DetailsAbout = () => {
-  return <ContainerAbout />;
+  return (
+    <ContainerAbout>
+      <ContainerWeight>
+        <ContainerWeightProps />
+      </ContainerWeight>
+      <ContainerBarra />
+      <ContainerHeigth></ContainerHeigth>
+      <ContainerBarra />
+      <ContainerMoves></ContainerMoves>
+    </ContainerAbout>
+  );
 };
 
 export default DetailsAbout;
