@@ -6,4 +6,5 @@ export const ContainerPai = styled.View`
   width: 97%;
   justify-content: space-around;
   align-items: center;
+  border-radius: 10px;
 `;

@@ -13,7 +13,7 @@ const Abilities = ({ data }: IPokemonProps) => {
     <ContainerPai>
       <DetailsType data={data} />
       <DetailsTitle data={data} />
-      <DetailsAbout />
+      <DetailsAbout data={data} />
       <DetailsText />
       <DetailsTitle2 />
       <DetailsStats />
