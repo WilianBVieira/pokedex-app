@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
-interface CardProps {
+export interface CardProps {
   color: string;
 }
 

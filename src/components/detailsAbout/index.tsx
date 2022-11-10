@@ -27,7 +27,6 @@ export interface IPokemonProps {
 }
 
 const DetailsAbout = ({ data }: IPokemonProps) => {
-  console.log(data);
   return (
     <ContainerAbout>
       <ContainerWeight>
