@@ -16,7 +16,7 @@ const Abilities = ({ data }: IPokemonProps) => {
       <DetailsAbout data={data} />
       <DetailsText data={data} />
       <DetailsTitle2 data={data} />
-      <DetailsStats />
+      <DetailsStats data={data} />
     </ContainerPai>
   );
 };

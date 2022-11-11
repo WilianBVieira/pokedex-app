@@ -33,7 +33,7 @@ export interface IPokemon {
   past_types: [];
   species: {};
   sprites: { front_default: string };
-  stats: [];
+  stats: [{ base_stat: number }];
   types: [{ type: { name: string } }];
   weight: number;
 }
