@@ -4,16 +4,15 @@ interface CardProps {
 }
 
 export const ContainerType = styled.View`
-  height: 5%;
-  width: 60%;
+  height: 100%;
+  width: 100%;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
-  background-color: blue;
 `;
 
 export const ContainerNameType1 = styled.View<CardProps>`
-  width: 25%;
+  width: 35%;
   height: 100%;
   border-radius: 20px;
   align-items: center;
@@ -21,18 +20,8 @@ export const ContainerNameType1 = styled.View<CardProps>`
   background-color: ${(prop) => (prop.color ? prop.color : "white")};
 `;
 
-export const ContainerNameType2 = styled.View`
-  background-color: blue;
-  width: 25%;
-  height: 100%;
-  border-radius: 20px;
-`;
-
 export const ContainerName1 = styled.Text`
-  color: red;
+  color: white;
   font-size: 20px;
   font-weight: 600;
-  color: white;
 `;
-
-export const ContainerName2 = styled.Text``;

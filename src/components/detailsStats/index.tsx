@@ -67,20 +67,32 @@ const DetailsStats = ({ data }: IPokemonProps) => {
         <ContainerProgress1>
           <Progress
             value={data && data.stats[1].base_stat / 2}
-            colorScheme={"red"}
+            colorScheme={useTypes(data && data.types[0].type.name)}
           />
         </ContainerProgress1>
         <ContainerProgress1>
-          <Progress value={data && data.stats[2].base_stat / 2} />
+          <Progress
+            value={data && data.stats[2].base_stat / 2}
+            colorScheme={useTypes(data && data.types[0].type.name)}
+          />
         </ContainerProgress1>
         <ContainerProgress1>
-          <Progress value={data && data.stats[3].base_stat / 2} />
+          <Progress
+            value={data && data.stats[3].base_stat / 2}
+            colorScheme={useTypes(data && data.types[0].type.name)}
+          />
         </ContainerProgress1>
         <ContainerProgress1>
-          <Progress value={data && data.stats[4].base_stat / 2} />
+          <Progress
+            value={data && data.stats[4].base_stat / 2}
+            colorScheme={useTypes(data && data.types[0].type.name)}
+          />
         </ContainerProgress1>
         <ContainerProgress1>
-          <Progress value={data && data.stats[5].base_stat / 2} />
+          <Progress
+            value={data && data.stats[5].base_stat / 2}
+            colorScheme={useTypes(data && data.types[0].type.name)}
+          />
         </ContainerProgress1>
       </ContainerProgress>
     </ContainerBaseStats>

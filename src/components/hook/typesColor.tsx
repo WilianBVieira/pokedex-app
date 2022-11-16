@@ -1,40 +1,40 @@
 export default function getColor(type: string | undefined) {
   switch (type) {
     case "poison":
-      return "#a041a2";
+      return "rgb(160, 65, 162)";
     case "fire":
-      return "#f27f2c";
+      return "rgb(242, 127, 44)";
     case "normal":
-      return "#aaa683";
+      return "rgb(170, 166, 131)";
     case "fighting":
-      return "#bf3026";
+      return "rgb(191, 48, 38)";
     case "water":
-      return "#688ff5";
+      return "rgb(104, 143, 245)";
     case "flying":
-      return "#a791ec";
+      return "rgb(167, 145, 236)";
     case "grass":
-      return "#77c94a";
+      return "rgb(119, 201, 74)";
     case "electric":
-      return "#f9d02f";
+      return "rgb(249, 208, 47)";
     case "ground":
-      return "#dcc06a";
+      return "rgb(220, 192, 106)";
     case "psychic":
-      return "#f75c88";
+      return "rgb(247, 92, 136)";
     case "rock":
-      return "#b6a03b";
+      return "rgb(182, 160, 59)";
     case "ice":
-      return "#97d9d5";
+      return "rgb(151, 217, 213)";
     case "bug":
-      return "#a7b91f";
+      return "rgb(167, 185, 31)";
     case "dragon":
-      return "#7239f4";
+      return "rgb(114, 57, 244)";
     case "ghost":
-      return "#745895";
+      return "rgb(116, 88, 149)";
     case "dark":
-      return "#6d5a45";
+      return "rgb(109, 90, 69)";
     case "steel":
-      return "#b9b8d3";
+      return "rgb(185, 184, 211)";
     case "fairy":
-      return "#eb9baa";
+      return "rgb(235, 155, 170)";
   }
 }

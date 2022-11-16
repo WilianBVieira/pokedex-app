@@ -14,11 +14,10 @@ export interface IPokemonProps {
 
 const DetailsType = ({ data }: IPokemonProps) => {
   return (
-    <ContainerType>
-      <ContainerNameType1 color={useTypes(data && data.types[0].type.name)}>
+    <ContainerType color={"blue"}>
+      <ContainerNameType1 color={"red"}>
         <ContainerName1>{data && data.types[0].type.name}</ContainerName1>
       </ContainerNameType1>
-      <ContainerNameType2></ContainerNameType2>
     </ContainerType>
   );
 };
