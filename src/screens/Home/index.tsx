@@ -11,13 +11,10 @@ const Icon2 = require("../../assets/Vector.png");
 const Icon3 = require("../../assets/Lupa.png");
 const ImgCard = require("../../assets/Bulbasaur.png");
 interface IReq {
-  count: number;
-  next: string;
-  previous: string;
   results: [IList];
 }
 const Home = () => {
-  const [data, setData] = useState<IReq>();
+  const [data, setData] = useState<IList[]>();
   const [page, setPage] = useState(1);
   function handlePage(click: number) {
     setPage(page + click);
@@ -28,8 +25,9 @@ const Home = () => {
       `https://pokeapi.co/api/v2/pokemon/?offset=${(page - 1) * 21}&limit=21`
     )
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((data: IReq) => setData(data.results));
   }, [page]);
+  const [filter, setFilter] = useState<string>("");
   return (
     <ContainerPai>
       <Header />
@@ -38,7 +36,13 @@ const Home = () => {
         pages={page}
         handleClick={(click: number) => handlePage(click)}
       />
-      <List data={data && data.results} />
+      <List
+        data={
+          data && filter != ""
+            ? data.filter((item) => item.name.match(filter.toLowerCase()))
+            : data && data
+        }
+      />
     </ContainerPai>
   );
 };

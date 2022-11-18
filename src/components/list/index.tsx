@@ -7,7 +7,7 @@ export interface IList {
   name: string;
 }
 interface IListProps {
-  data: [IList] | undefined;
+  data: IList[] | undefined;
 }
 
 const List = ({ data }: IListProps) => {
