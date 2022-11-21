@@ -19,6 +19,9 @@ const Home = () => {
   function handlePage(click: number) {
     setPage(page + click);
   }
+  function handleFilter(valor: string) {
+    setFilter(valor);
+  }
 
   useEffect(() => {
     fetch(
@@ -27,19 +30,19 @@ const Home = () => {
       .then((res) => res.json())
       .then((data: IReq) => setData(data.results));
   }, [page]);
-  const [filter, setFilter] = useState<string>("");
+  const [filtro, setFilter] = useState<string>("");
   return (
     <ContainerPai>
       <Header />
-      <SearchBar />
+      <SearchBar func={(valor: string) => handleFilter(valor)} />
       <Pagination
         pages={page}
         handleClick={(click: number) => handlePage(click)}
       />
       <List
         data={
-          data && filter != ""
-            ? data.filter((item) => item.name.match(filter.toLowerCase()))
+          data && filtro != ""
+            ? data.filter((item) => item.name.match(filtro.toLowerCase()))
             : data && data
         }
       />

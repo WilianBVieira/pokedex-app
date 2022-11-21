@@ -3,14 +3,14 @@ import React, { useState } from "react";
 import { Container } from "./styles";
 import Ionicons from "@expo/vector-icons/AntDesign";
 
-const SearchBar = () => {
-  const [filter, setFilter] = useState("");
-
+interface SearchProps {
+  func: (e: string) => void;
+}
+const SearchBar = ({ func }: SearchProps) => {
   return (
     <Container>
       <Input
-        value={filter}
-        onChangeText={(e: string) => setFilter(e)}
+        onChangeText={(e: string) => func(e)}
         InputLeftElement={<Ionicons name="search1" size={15} color="#979797" />}
         placeholder="Procurar"
         style={{

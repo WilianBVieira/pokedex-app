@@ -11,13 +11,6 @@ interface IListProps {
 }
 
 const List = ({ data }: IListProps) => {
-  //   return (
-  //     <SafeAreaView>
-  //       <ScrollView>
-  //         {data && data.map((item, index) => <Card data={item} key={index} />)}
-  //       </ScrollView>
-  //     </SafeAreaView>
-  //   );
   useEffect(() => {}, [data]);
   return (
     <FlatList
